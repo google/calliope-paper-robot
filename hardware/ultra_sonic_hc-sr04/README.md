@@ -188,17 +188,26 @@ We additional convert the value to distance in centimeters and store the result 
 
 ![Example of sensor digital](images/pulse_time_high_echo_pin.png)
 
-#### e.) Show the distance
+#### e.) Switch off/on the LED matrix
+
+Most of the pins are shared with other on-board devices, like the LED matrix display.
+To make sure we avoid any possible side effects or flickering, we need disable and re-enable the LED matrix after the reading of the value digital value from the **echo** pin.
+
+For this reason we move the **switch LED matrix block** from the **Actions -> Pin section** after the reading and set it to "off" and "on" to re-enable the display.
+
+![Example of switch LED Matrix](images/switch_led_matrix.png)
+
+#### f.) Show the distance
 
 In the next step we are displaying the result of the Distance variable on the LCD screen over the **show text block** from the **Action -> Display** section.
 
 ![Example of sensor digital](images/show_text_variable.png)
 
-#### f.) Delay execution
+#### g.) Delay execution
 
-To lower the power consumption, temperature and cpu usage of your program, it's a good idea to delay the execution by 50ms or with the **wait ms block** from the **Control -> Wait section**.
+To lower the power consumption, temperature and cpu usage of your program, it's a good idea to delay the execution by 500ms or with the **wait ms block** from the **Control -> Wait section**.
 
-For most use-cases it's not need to read the distance every 1ms.
+For most use-cases it's not need to read the distance every 1ms, maybe every 10ms or 100ms.
 
 ![Example of sensor digital](images/wait_50ms.png)
 
