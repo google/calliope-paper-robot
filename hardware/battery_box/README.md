@@ -143,3 +143,5 @@ Finally, put back the battery box cover and your modified battery box is ready t
 ### Done
 
 You successfully build a battery box which could power your Calliope Mini with 3V over the black and yellow wire and other actors / sensors over the black and red wire with 4.5V.
+
+![Example battery box](images/battery_box_example.png)

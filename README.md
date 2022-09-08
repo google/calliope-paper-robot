@@ -25,8 +25,8 @@ It's mandatory to understand the basics before moving to the other more advanced
 This area covers any special or additional hardware for the Calliope Mini.
 
 - [Battery Box with 3v and 4.5v](hardware/battery_box/README.md) ✔️
-- [Ultra Sonic HC-SR04](#ultra_sonic_hc-sr04) 🚧
-- [Mirco Servo 9g SG90](#micro_servo_9g_sg90) 🚧
+- [Ultra Sonic HC-SR04](hardware/ultra_sonic_hc-sr04/README.md) ✔️
+- [Micro Servo 9g SG90](#micro_servo_9g_sg90) 🚧
 
 ### 🤖 **Paper Robot**
 
