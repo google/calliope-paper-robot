@@ -12,7 +12,7 @@ The content is separated in three different main areas to cover different kind o
 This area covers the basic around the Calliope Mini and the built in sensors and actors.
 It's mandatory to understand the basics before moving to the other more advanced parts.
 
-- [Overview](#calliope_mini_overview) 🚧
+- [Overview / Board](calliope_mini/board/README.md) ✔️
 - [LCD Screen](#lcd_screen) 🚧
 - [Speaker](#speaker) 🚧
 - [RGB-LED](#rgb_led) 🚧
