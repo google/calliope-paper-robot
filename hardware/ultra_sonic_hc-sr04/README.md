@@ -1,8 +1,8 @@
-# Ultra Sonic HC-SR04 Sensor
+# Ultrasonic HC-SR04 Sensor
 
-![Example of ultra sonic hc-sr04 sensor](images/ultra_sonic_hc-sr04_sensor.png)
+![Example of ultrasonic hc-sr04 sensor](images/ultrasonic_hc-sr04_sensor.png)
 
-This tutorial covers the basic to connect and use the ultra sonic hc-sr04 sensor to a Calliope Mini together with the Open Roberta Lab.
+This tutorial covers the basic to connect and use the ultrasonic hc-sr04 sensor to a Calliope Mini together with the [Open Roberta Lab][open_roberta_lab].
 
 ## Requirements
 
@@ -14,7 +14,7 @@ The following hardware components are required for this project.
 
 | Name                                                                                         | Quantity |
 | -------------------------------------------------------------------------------------------- | -------- |
-| Ultra Sonic HC-SR04 Sensor                                                                   | x 1      |
+| Ultrasonic HC-SR04 Sensor                                                                    | x 1      |
 | 4.5V-5V power source like the [Battery Box with 3V and 4.5V power](../battery_box/README.md) | x 1      |
 | Jump wire female-female or female-alligator in different colors                              | x 4      |
 | Optional: Two row pin header (2mm distance, 5 x 2)                                           | x 1      |
@@ -24,36 +24,36 @@ The following hardware components are required for this project.
 
 The official supported Grove - Ultrasonic Ranger sensor works fine for most use cases, but unfortunately it's blocking the A1 port and is additional not easy to get in most regions.
 
-For this reason I looked for an easy and simple solution to connect the more common ultra sonic hc-sr04 sensor to the Calliope Mini over the other pins instead.
+For this reason I looked for an easy and simple solution to connect the more common ultrasonic hc-sr04 sensor to the Calliope Mini over the existing pins instead.
 
 ### Technical Background
 
-The ultra sonic sensor has 4 connection pins like:
+The ultrasonic sensor has 4 connection pins like:
 
 - **VCC** - Voltage 3.3V - 5.5V (recommended 5V with 10% tolerance)
-- **Trig** - Trigger the ultra sonic burst. Set this pin to HIGH for 10µs, to trigger an ultrasonic burst (unique 8 pulse pattern).
-- **Echo** - Received ultra sonic pulse. This pin will be HIGH after sending out a ultra sonic pulse and will go LOW after receiving the ultra sonic burst echo.
+- **Trig** - Trigger the ultrasonic burst. Set this pin to HIGH for 10µs, to trigger an ultrasonic burst (unique 8 pulse pattern).
+- **Echo** - Received ultrasonic pulse. This pin will be HIGH after sending out a ultrasonic pulse and will go LOW after receiving the ultrasonic burst echo.
 - **GND** - Ground
 
-In most cases the ultra sonic sensor will work with 3.3V and 5V, but far less accurate.
+In most cases the ultrasonic sensor will work with 3.3V, but far less accurate.
 If you need more accurate results within 3mm ranges you should make sure to provide 4.5V or exact 5.0V instead.
 
 #### How does is work ?
 
-By setting the **Trig pin** to **HIGH** for _10µs (microseconds)_ the ultra sonic sensor will send a ultrasonic burst with an unique 8 pulse pattern.
+By setting the **Trig pin** to **HIGH** for _10µs (microseconds)_ the ultrasonic sensor will send a ultrasonic burst with an unique 8 pulse pattern.
 
-This unique 8 pulse pattern makes sure that you can use several ultra sonic sensors at once and that the signals are not colliding with each other.
+This unique 8 pulse pattern makes sure that you can use several ultrasonic sensors at once and that the signals are not colliding with each other.
 
 If the sensor receiving the ultrasonic burst it will set the **Echo pin** to **LOW**.
 Otherwise the **Echo pin** will set to LOW after a _38ms timeout_ instead.
 
-By measuring the time between the sending out of the ultrasonic burst and the received echo, we could calculate the distance between the ultra sonic sensor and the reflecting object.
+By measuring the time between the sending out of the ultrasonic burst and the received echo, we could calculate the distance between the ultrasonic sensor and the reflecting object.
 
 ```math
 Distance = Speed * Time
 ```
 
-First need to use the travel speed of ultra sonic waves in air which is 343,2 m/second and converting it to centimeters per microseconds.
+First need to use the travel speed of ultrasonic waves in air which is 343,2 m/second and converting it to centimeters per microseconds.
 Because the signals travels forwards and backwards we need additional to use it two times with results in about ~58cm/µs.
 
 ```math
@@ -66,11 +66,16 @@ To get the distance in centimeter we just used the measures time between Trig an
 Distance (cm) = 58cm/µs * Time
 ```
 
-### 1. Prepare the Pins for Trig and Echo
+### 1. Prepare the Pins for Trig, Echo, VCC and GND
 
 The Trig and Echo pin requires a digital signal, this means we you should try to avoid to use any analog, touch or other special pins to allow to use them for other sensors or actors which requires them.
 
-Recommended pins:
+Recommended pins (basic):
+
+- **P0 / C0**
+- **P3 / C3**
+
+Recommended pins (advanced):
 
 - C04
 - C05
@@ -102,35 +107,33 @@ Valid pins:
 - C18 (SDA)
 - C19 (SCL)
 
-If not already installed use the two row pin header (5 x 2) to cover the pins C1 - C8.
+If not already installed use the two row pin header (5 x 2) to cover the pins C0 - C9.
 
 ![Example of pin headers](images/pin_headers.png)
 
-If you only want to use the ultra sonic sensor and no other sensors together with alligator jump wire, you should use the **C1** and **C2** pins instead.
+If you only want to use the ultrasonic sensor and no other sensors together with alligator jump wire, you should use the **P0 / C0** and **P3 / C3** pins instead.
 
 ![Example of alligator jump wire](images/alligator_jump_wire.png)
 
 #### Trig Pin
 
-We recommend to use the pin **C8** for the Trig signal.
+We recommend to use the pin **P0 / C0** or **C8** for the Trig signal.
 
 ![Example of connected trig pin](images/connected_trig_pin.png)
 
 #### Echo Pin
 
-We recommend to use the pin **C9** for the echo signal.
+We recommend to use the pin **P3 / C3** or **C9** for the echo signal.
 
 ![Example of connected echo pin](images/connected_echo_pin.png)
 
-## Prepare the Pin for VCC and GND
-
-### VCC (Voltage) Pin and GND (Ground) Pin
+#### VCC (Voltage) Pin and GND (Ground) Pin
 
 ![Example of connected vcc and gnd pin](images/connected_vcc_gnd_pin.png)
 
 ### 2. Pin Configuration for Trig pin and Echo pin
 
-Before we could start using the ultra sonic sensor, we first need to configure it inside the **robot configuration** tab.
+Before we could start using the ultrasonic sensor, we first need to configure it inside the **robot configuration** tab.
 
 ![Example of robot configuration tab](images/robot_configuration_tab.png)
 
@@ -142,7 +145,7 @@ For the echo pin you need to use the **actuator digital block** from the **Actio
 
 ![Example of actuator digital](images/action_actuator_digital.png)
 
-Move the block to the Calliope Mini and change the port to **C08** or the port you have chosen for your project.
+Move the block to the Calliope Mini and change the port to **P0 / C0** or **C08** or the port you have chosen for your project.
 
 ### Trig Pin configuration
 
@@ -150,7 +153,7 @@ For the trig pin you need to use **sensor digital block** from the **Sensors sec
 
 ![Example of sensor digital](images/sensors_sensor_digital.png)
 
-Move the block to the Calliope Mini and change the port to **C09** or the port you have chosen for your project.
+Move the block to the Calliope Mini and change the port to **P3 / C3** or **C09** or the port you have chosen for your project.
 Furthermore you should change the pull option to down, if this cause any problems switch to none instead.
 
 ### 3. Example Program
@@ -190,6 +193,8 @@ We additional convert the value to distance in centimeters and store the result 
 
 #### e.) Switch off/on the LED matrix
 
+You can skip this step if you are using pin **P0 / C0** and **P3 / C3** for connecting the ultrasonic sensor.
+
 Most of the pins are shared with other on-board devices, like the LED matrix display.
 To make sure we avoid any possible side effects or flickering, we need disable and re-enable the LED matrix after the reading of the value digital value from the **echo** pin.
 
@@ -213,4 +218,6 @@ For most use-cases it's not need to read the distance every 1ms, maybe every 10m
 
 ### Done
 
-You successfully connected a ultra sonic HC-SR04 sensor to your Calliope Mini to display the measured distance.
+You successfully connected a ultrasonic HC-SR04 sensor to your Calliope Mini to display the measured distance.
+
+[open_roberta_lab]: https://lab.open-roberta.org/

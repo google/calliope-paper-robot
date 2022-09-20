@@ -25,7 +25,7 @@ It's mandatory to understand the basics before moving to the other more advanced
 This area covers any special or additional hardware for the Calliope Mini.
 
 - [Battery Box with 3v and 4.5v](hardware/battery_box/README.md) ✔️
-- [Ultra Sonic HC-SR04](hardware/ultra_sonic_hc-sr04/README.md) ✔️
+- [Ultrasonic HC-SR04](hardware/ultrasonic_hc-sr04/README.md) ✔️
 - [Micro Servo 9g SG90](#micro_servo_9g_sg90) 🚧
 
 ### 🤖 **Paper Robot**
@@ -33,10 +33,11 @@ This area covers any special or additional hardware for the Calliope Mini.
 This area covers the paper robot and how the different parts will work together.
 After following these steps you will have great foundation for most of the public available examples and projects for your Calliope Mini.
 
-- [Base](#base) 🚧
-- [Body](#body) 🚧
-- [Head](#head) 🚧
-- [Arms](#arms) 🚧
+- [Paper Robot](paper_robot/README.md) ✔️
+- [Base](paper_robot/base/README.md) 🚧
+- [Body](paper_robot/body/README.md) 🚧
+- [Head](paper_robot/head/README.md) 🚧
+- [Arms](paper_robot/arms/README.md) 🚧
 
 ## 🧩 Status
 
