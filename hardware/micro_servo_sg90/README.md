@@ -1,5 +1,7 @@
 # Micro Servo SG90
 
+![Example of micro servo](images/micro_servo.png)
+
 This tutorial covers the basic to connect and use the micro servo SG90 with a Calliope Mini together with the [Open Roberta Lab][open_roberta_lab].
 
 ## Requirements
@@ -50,7 +52,31 @@ Basic Example:
 The servo itself is a basic motor, but with an position sensor, so the servo know when it has reached a specific position.
 There are also servos which support a full 360° range, these are mostly use as wheels for moving robots.
 
-### 1. Prepare the Pin for the Signal, VCC and GND
+### 1. Trim the servo
+
+First of all before we could use the servo, we need to trim the servo to make sure it has the correct position for our use-case.
+
+Make sure that the servo is not connected to any power source.
+![Example of servo without servo horn](images/servo_without_servo_horn.png)
+
+Look for the corresponding **servo horn** and place it lossy on the servo.
+![Example of servo horns](images/servo_horns.png)
+
+Turn the **servo horn** gently in one direction until it get's blocked / stopped.
+![Example of trim servo one way](images/trim_servo_one_way.png)
+
+Re-position / re-attach the **servo horn** to mark the end position.
+![Example of trim servo replace](images/trim_servo_reposition.png)
+
+Turn the **servo horn** gently in the other direction until it get's blocked / stopped.
+Check if the other end position looks fine, if not repeat the steps until the **servo horn** has the correct end stops.
+
+![Example of servo without servo horn](images/trim_servo_other_way.png)
+
+If everything looks fine, fixate the **servo horn** with the screw.
+![Example of servo without servo horn](images/screw_servo_horn.png)
+
+### 2. Prepare the Pin for the Signal, VCC and GND
 
 The Signal pin requires a analog signal, this means we are limited in the possible pins we could use.
 
@@ -89,7 +115,7 @@ We recommend to use the pin **P1 / C1** or **C04** for the signal pin.
 
 ![Example of connected vcc and gnd pin](images/connected_vcc_gnd_pin.png)
 
-### 2. Pin Configuration for Signal pin
+### 3. Pin Configuration for Signal pin
 
 Before we could start using the servo, we first need to configure it inside the **robot configuration** tab.
 
@@ -105,7 +131,7 @@ For the signal pin you need to use the **servo motor block** from the **Action s
 
 Move the block to the Calliope Mini and change the port to **P1 / C1** or the port you have chosen for your project.
 
-### 3. Example Program
+### 4. Example Program
 
 In the last step we are writing a small program which will move the servo depending on the pressed buttons A and B.
 

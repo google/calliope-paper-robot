@@ -1,5 +1,7 @@
 # 🤖 Calliope Paper Robot
 
+![Example of paper robot](paper_robot/paper_robot.jpg)
+
 This open source project provides an easy to build and easy to setup paper robot for the [Calliope Mini][calliope_mini] board.
 It includes basic examples how to use the [Calliope Mini][calliope_mini], details on using additional hardware and advanced examples to program the robot with the [Open Roberta Lab][open_roberta_lab].
 
@@ -12,7 +14,7 @@ The content is separated in three different main areas to cover different kind o
 This area covers the basic around the Calliope Mini and the built in sensors and actors.
 It's mandatory to understand the basics before moving to the other more advanced parts.
 
-- [Overview / Board](calliope_mini/board/README.md) ✔️
+- [Overview / Board](calliope_mini/board/README.md)
 - [LCD Screen](#lcd_screen) 🚧
 - [Speaker](#speaker) 🚧
 - [RGB-LED](#rgb_led) 🚧
@@ -24,20 +26,20 @@ It's mandatory to understand the basics before moving to the other more advanced
 
 This area covers any special or additional hardware for the Calliope Mini.
 
-- [Battery Box with 3v and 4.5v](hardware/battery_box/README.md) ✔️
-- [Ultrasonic HC-SR04](hardware/ultrasonic_hc-sr04/README.md) ✔️
-- [Micro Servo 9g SG90](#micro_servo_9g_sg90) 🚧
+- [Battery Box with 3v and 4.5v](hardware/battery_box/README.md)
+- [Ultrasonic HC-SR04](hardware/ultrasonic_hc-sr04/README.md)
+- [Micro Servo 9g SG90](hardware/micro_servo_sg90/README.md)
 
 ### 🤖 **Paper Robot**
 
 This area covers the paper robot and how the different parts will work together.
 After following these steps you will have great foundation for most of the public available examples and projects for your Calliope Mini.
 
-- [Paper Robot](paper_robot/README.md) ✔️
-- [Base](paper_robot/base/README.md) 🚧
-- [Body](paper_robot/body/README.md) 🚧
-- [Head](paper_robot/head/README.md) 🚧
-- [Arms](paper_robot/arms/README.md) 🚧
+- [Paper Robot](paper_robot/README.md)
+- [Base](paper_robot/base/README.md)
+- [Body](paper_robot/body/README.md)
+- [Head](paper_robot/head/README.md)
+- [Arms](paper_robot/arms/README.md)
 
 ## 🧩 Status
 
