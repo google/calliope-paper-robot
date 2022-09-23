@@ -49,9 +49,14 @@ The following additional tools are needed.
 | -------------------------------------- | -------- |
 | Printer to print the template on paper | x 1      |
 
-## Building Time - Papercraft
+## Building Process
+
+The building process is separated into the papercraft part, testing part and final building part.
+
+### Papercraft
 
 Cutting, bending and glueing the different parts takes some time and should not be under estimated.
+I recommending building the different parts in the listed order to make sure that the base parts are try to the start.
 
 | Part                        | Avg Time | Avg Time with pre-cutting |
 | --------------------------- | -------- | ------------------------- |
@@ -65,20 +70,69 @@ If you using this project for an class room training, I recommend considering fo
 - Build teams with two person per paper robot, so that they could work in parallel.
 - Pre-cut hard parts with an cutter.
 - Use a prick punch for the wholes.
-- Make sure that the used glue is not take ages to try.
+- Make sure to use a glue which is not take ages to try.
 
-## Variants
+### Variants
 
 The paper bot could be build in two different kind of versions, for schools or for the start I recommend using the basic version.
 
-### Basic Version
+#### Basic Version
 
 The basic versions is using the standard pins P0-P3 for connecting the different kind of components.
 This has the advancement that the LED screen and other on-board components are working without workarounds.
 The down side is that the visible standard pins P0-P3 could not be used for any other propose.
 
-### Advanced Version
+##### Connection Pins
+
+The following pins are used for the different kind of sensors and actors for the basic version.
+
+| Name                     | Device Pin | Calliope Mini Pin | Battery Pack |
+| ------------------------ | ---------- | ----------------- | ------------ |
+| Micro Servo SG90 (left)  | GND ⏚      | -                 | GND ⏚        |
+| Micro Servo SG90 (left)  | SIGNAL 🦾  | P1 /C1 🟠         | -            |
+| Micro Servo SG90 (left)  | VCC ⚡     | -                 | 5V ⚡        |
+| Micro Servo SG90 (right) | GND ⏚      | -                 | GND ⏚        |
+| Micro Servo SG90 (right) | SIGNAL 🦾  | P2 /C2 🟠         | -            |
+| Micro Servo SG90 (right) | VCC⚡      | -                 | 5V ⚡        |
+| Ultrasonic HC SR04       | GND ⏚      | -                 | GND ⏚        |
+| Ultrasonic HC SR04       | TRIG 🕪     | P0 /C0 🟡         | -            |
+| Ultrasonic HC SR04       | ECHO 🎤    | P3 /C3 🟢         | -            |
+| Ultrasonic HC SR04       | VCC ⚡     | -                 | 5V ⚡        |
+
+#### Advanced Version
 
 The advanced versions is using on-board pins which are shared with other onboard components of the board.
 This has the advancement that the standard pins P0-P3 could be still used for other use-cases.
 The down side is that there will be a limitations with internal components like the 5x5 LED Matrix which requires specific workarounds.
+
+## Testing
+
+Before building the final robot you should make sure to follow the testing part of the [Base Part](base/README.md).
+The base is ideal for testing your program with the micro servo and ultra sonic sensor before assembling the final robot.
+
+![Example image of testing base](base/images/paper_robot_base_assembled.jpg)
+
+## Building Part
+
+After you prepared all parts and successful tested your program, you can assemble the final robot.
+You just need to use the two connector blocks to mount the body to the base and the head to the body.
+If you want to glue the connectors you should glue them only into the body part.
+This make sure that you could still easily use the base for testing or adjusting the head, if needed.
+
+![Paper robot with arms](arms/images/paper_robot_with_arms.jpg)
+
+### Body
+
+The body has several cable opening to allow an easy cable management to avoid that cables are in the way of the moving servos.
+
+![Paper robot with cables](body/images/paper_robot_body_cables.jpg)
+
+### Head
+
+![Paper robot head with cables](head/images/paper_robot_head_cables.jpg)
+
+The head allows the mounting of the ultra sonic sensor in two directions, if needed you can extend the jump wires and using the connection blocks for the cables.
+
+### Arms
+
+The arms are open in the front, which allows to build tools or other accessory for them.

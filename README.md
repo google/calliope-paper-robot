@@ -15,12 +15,12 @@ This area covers the basic around the Calliope Mini and the built in sensors and
 It's mandatory to understand the basics before moving to the other more advanced parts.
 
 - [Overview / Board](calliope_mini/board/README.md)
-- [LCD Screen](#lcd_screen) 🚧
-- [Speaker](#speaker) 🚧
-- [RGB-LED](#rgb_led) 🚧
-- [Position Sensor](#position_sensor) 🚧
-- [Button A/B](#button_a_b) 🚧
-- [Pins](#pins) 🚧
+  - LCD Screen
+  - Speaker
+  - RGB-LED
+  - Position Sensor
+  - Button A/B
+  - Pins
 
 ### 🦾 **Hardware**
 
@@ -36,10 +36,10 @@ This area covers the paper robot and how the different parts will work together.
 After following these steps you will have great foundation for most of the public available examples and projects for your Calliope Mini.
 
 - [Paper Robot](paper_robot/README.md)
-- [Base](paper_robot/base/README.md)
-- [Body](paper_robot/body/README.md)
-- [Head](paper_robot/head/README.md)
-- [Arms](paper_robot/arms/README.md)
+  - [Base](paper_robot/base/README.md)
+  - [Body](paper_robot/body/README.md)
+  - [Head](paper_robot/head/README.md)
+  - [Arms](paper_robot/arms/README.md)
 
 ## 🧩 Status
 
