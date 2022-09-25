@@ -1,6 +1,6 @@
 # Paper Robot
 
-![Example of paper robot](paper_robot.jpg)
+![Example of paper robot](paper_robot_colored.jpg)
 
 The paper robot is an easy to build but functional robot for the Calliope Mini.
 The intention was to construct a low-cost robot which use most of the more common components instead of expensive and hard to get components.
@@ -136,3 +136,21 @@ The head allows the mounting of the ultra sonic sensor in two directions, if nee
 ### Arms
 
 The arms are open in the front, which allows to build tools or other accessory for them.
+
+## Wiring Part
+
+The final wiring for the two micro servo sg90 and the ultra sonic hc-sr04 sensor should look like the following.
+
+You don't need to use exact the same colors for the wiring, but you should make sure to use different kind of colors to not get confused yourself with the wiring at any time.
+
+### Connection Pads Wiring
+
+If you are using the connection pads, your wiring should look like this.
+
+![Example of servo and ultra sonic wiring](base/images/base_servo_and_ultrasonic_wiring.png)
+
+### Connection Pin Header Wiring
+
+If you are using the connection pin header, your wiring should look like this.
+
+![Example of servo and ultra sonic wiring](base/images/base_servo_and_ultrasonic_wiring_pin_header.png)

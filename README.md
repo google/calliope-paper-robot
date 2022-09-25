@@ -1,6 +1,6 @@
 # 🤖 Calliope Paper Robot
 
-![Example of paper robot](paper_robot/paper_robot.jpg)
+![Example of paper robot](paper_robot/paper_robot_colored.jpg)
 
 This open source project provides an easy to build and easy to setup paper robot for the [Calliope Mini][calliope_mini] board.
 It includes basic examples how to use the [Calliope Mini][calliope_mini], details on using additional hardware and advanced examples to program the robot with the [Open Roberta Lab][open_roberta_lab].
@@ -26,7 +26,9 @@ It's mandatory to understand the basics before moving to the other more advanced
 
 This area covers any special or additional hardware for the Calliope Mini.
 
-- [Battery Box with 3v and 4.5v](hardware/battery_box/README.md)
+- Battery Box
+  - [Battery Box with 3v and 4.5v](hardware/battery_box/README.md)
+  - [Battery Box with 3v and 4.5v and Connectors](hardware/battery_box_advanced/README.md)
 - [Ultrasonic HC-SR04](hardware/ultrasonic_hc-sr04/README.md)
 - [Micro Servo 9g SG90](hardware/micro_servo_sg90/README.md)
 

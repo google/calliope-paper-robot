@@ -33,7 +33,31 @@ The following pins are used for the different kind of sensors and actors.
 | Ultrasonic HC SR04       | ECHO 🎤    | P3 /C3 🟢         | -            |
 | Ultrasonic HC SR04       | VCC ⚡     | -                 | 5V ⚡        |
 
-## Example Program
+## Wiring
+
+For wiring the different kind of connection, the following is recommend.
+
+### Micro Servos SG90 wiring
+
+![Example of servo wiring](images/base_servos_wiring.png)
+
+### Ultra Sonic HC-SRC04 wiring
+
+![Example of ultra sonic wiring](images/base_ultrasonic_wiring.png)
+
+### Micro Servos SG90 and Ultra Sonic HC-SRC04 wiring
+
+![Example of servo and ultra sonic wiring](images/base_servo_and_ultrasonic_wiring.png)
+
+## Example Program / Test Program
+
+### Configuration
+
+For the example program we are using the following robot configuration.
+
+![Example test configuration](images/example_test_configuration.png)
+
+### Program
 
 The following program could be used for a simple test to see if everything works correct.
 
