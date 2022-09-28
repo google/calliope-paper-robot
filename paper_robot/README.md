@@ -147,10 +147,10 @@ You don't need to use exact the same colors for the wiring, but you should make 
 
 If you are using the connection pads, your wiring should look like this.
 
-![Example of servo and ultra sonic wiring](base/images/base_servo_and_ultrasonic_wiring.png)
+![Example of servo and ultra sonic wiring](fritzing/servo_and_ultrasonic_wiring.png)
 
 ### Connection Pin Header Wiring
 
 If you are using the connection pin header, your wiring should look like this.
 
-![Example of servo and ultra sonic wiring](base/images/base_servo_and_ultrasonic_wiring_pin_header.png)
+![Example of servo and ultra sonic wiring](fritzing/servo_and_ultrasonic_wiring_pin_header.png)

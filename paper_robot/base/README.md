@@ -39,15 +39,39 @@ For wiring the different kind of connection, the following is recommend.
 
 ### Micro Servos SG90 wiring
 
-![Example of servo wiring](images/base_servos_wiring.png)
+Example wiring for the micro servo SG90 with contact pins or pin headers.
+
+#### Micro Servos SG90 wiring with contact pins
+
+![Example of servo wiring](../fritzing/servo_wiring.png)
+
+#### Micro Servos SG90 wiring with pin header
+
+![Example of servo wiring with pin header](../fritzing/servo_wiring_pin_header.png)
 
 ### Ultra Sonic HC-SRC04 wiring
 
-![Example of ultra sonic wiring](images/base_ultrasonic_wiring.png)
+Example wiring for the ultra sonic HC-SRC04 sensor with contact pins or pin headers.
+
+#### Ultra Sonic HC-SRC04 wiring with contact pins
+
+![Example of ultra sonic wiring](../fritzing/ultrasonic_wiring.png)
+
+#### Ultra Sonic HC-SRC04 wiring with pin header
+
+![Example of ultra sonic wiring](../fritzing/ultrasonic_wiring_pin_header.png)
 
 ### Micro Servos SG90 and Ultra Sonic HC-SRC04 wiring
 
-![Example of servo and ultra sonic wiring](images/base_servo_and_ultrasonic_wiring.png)
+Example wiring for the micro servo SG90 and ultra sonic HC-SRC04 sensor with contact pins or pin headers.
+
+#### Micro Servos SG90 and Ultra Sonic HC-SRC04 wiring with contact pins
+
+![Example of servo and ultra sonic wiring](../fritzing/servo_and_ultrasonic_wiring.png)
+
+#### Micro Servos SG90 and Ultra Sonic HC-SRC04 wiring with pin header
+
+![Example of servo and ultra sonic wiring](../fritzing/servo_and_ultrasonic_wiring_pin_header.png)
 
 ## Example Program / Test Program
 
